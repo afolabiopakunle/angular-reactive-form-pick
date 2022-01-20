@@ -1,15 +1,38 @@
 <div class="container p-3">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div formGroupName="biodata">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input
+          formControlName="firstName"
+          type="text"
+          class="form-control"
+          id="firstName"
+          aria-describedby="firstName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input
+          formControlName="lastName"
+          type="text"
+          class="form-control"
+          id="lastName"
+          aria-describedby="lastName"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
 
-<form [formGroup]="form" (ngSubmit)='onSubmit()'>
-<div class="mb-3">
-<label for="fullName" class="form-label">Full name</label>
-<input formControlName='fullName' type="text" class="form-control" id="fullName" aria-describedby="emailHelp">
-</div>
-<div class="mb-3">
-  <label for="exampleInputEmail1" class="form-label">Email address</label>
-  <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-</div>
-
-<button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
