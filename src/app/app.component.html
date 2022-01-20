@@ -1,4 +1,15 @@
 <div class="container p-3">
 
-  <button class="btn btn-success">Afolabi</button>
+<form [formGroup]="form" (ngSubmit)='onSubmit()'>
+<div class="mb-3">
+<label for="fullName" class="form-label">Full name</label>
+<input formControlName='fullName' type="text" class="form-control" id="fullName" aria-describedby="emailHelp">
+</div>
+<div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">Email address</label>
+  <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
 </div>
