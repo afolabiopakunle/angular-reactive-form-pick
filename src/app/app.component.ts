@@ -18,6 +18,11 @@ export class AppComponent implements OnInit {
         lastName: new FormControl(),
       }),
       email: new FormControl(),
+      skills: new FormGroup({
+        skillName: new FormControl(),
+        yearsOfExperience: new FormControl(),
+        proficiency: new FormControl()
+      })
     });
 
   }
