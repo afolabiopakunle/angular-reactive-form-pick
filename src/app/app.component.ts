@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
       })
     })
 
+    this.form.valueChanges.subscribe(value => console.log(value))
   }
 
   onSubmit() {
